@@ -6,14 +6,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.bogdaniium</groupId>
-    <artifactId>spring-core-examples</artifactId>
+    <artifactId>spring-examples</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>xml-configuration</module>
     </modules>
     <packaging>pom</packaging>
 
-    <name>spring-core-examples</name>
+    <name>spring-examples</name>
     <url>http://bogdanium.ru</url>
 
     <build>
