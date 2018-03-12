@@ -9,14 +9,8 @@ public class CoachTest {
     Coach coach;
 
     @Test
-    public void baseballCoachShouldReturnDailyWorkout() {
-        coach = new BaseballCoach();
-        assertEquals("Spend 30 minutes on batting practise", coach.getDailyWorkout());
-    }
-
-    @Test
-    public void trackCoachShouldReturnDailyWorkout() {
+    public void coachShouldReturnDailyWorkout() {
         coach = new TrackCoach();
-        assertEquals("Run a hard 5k", coach.getDailyWorkout());
+        assertEquals("Do track things.", coach.getDailyWorkout());
     }
 }
