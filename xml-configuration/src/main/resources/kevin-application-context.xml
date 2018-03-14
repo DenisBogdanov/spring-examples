@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bean" class="ru.bogdaniium.xml_configuration.kevin.Bean">
+    <bean id="bean" class="ru.bogdanium.xml_configuration.kevin.Bean">
         <property name="list">
             <list>
                 <value>Bo</value>
@@ -27,7 +27,14 @@
                 <entry key="b" value="Bogdanov"/>
             </map>
         </property>
-
     </bean>
+
+    <bean id="beanD" class="ru.bogdanium.xml_configuration.kevin.BeanD" />
+
+    <bean id="beanC" class="ru.bogdanium.xml_configuration.kevin.BeanC" autowire="constructor" />
+
+    <bean id="beanB" class="ru.bogdanium.xml_configuration.kevin.BeanB" />
+
+    <bean id="beanA" class="ru.bogdanium.xml_configuration.kevin.BeanA" autowire="constructor" />
 
 </beans>

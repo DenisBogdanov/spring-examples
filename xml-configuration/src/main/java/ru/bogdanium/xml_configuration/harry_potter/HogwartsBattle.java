@@ -1,4 +1,4 @@
-package ru.bogdaniium.xml_configuration.harry_potter;
+package ru.bogdanium.xml_configuration.harry_potter;
 
 public class HogwartsBattle implements Battle {
     private Wizard first;

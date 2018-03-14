@@ -3,25 +3,25 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="hawthornWand" class="ru.bogdaniium.xml_configuration.harry_potter.Wand">
+    <bean id="hawthornWand" class="ru.bogdanium.xml_configuration.harry_potter.Wand">
         <constructor-arg name="spell" value="Expelliarmus" />
     </bean>
 
-    <bean id="harryPotter" class="ru.bogdaniium.xml_configuration.harry_potter.Wizard">
+    <bean id="harryPotter" class="ru.bogdanium.xml_configuration.harry_potter.Wizard">
         <property name="wand" ref="hawthornWand" />
         <property name="name" value="Harry" />
     </bean>
 
-    <bean id="voldemort" class="ru.bogdaniium.xml_configuration.harry_potter.Wizard">
+    <bean id="voldemort" class="ru.bogdanium.xml_configuration.harry_potter.Wizard">
         <constructor-arg name="wand">
-            <bean class="ru.bogdaniium.xml_configuration.harry_potter.Wand">
+            <bean class="ru.bogdanium.xml_configuration.harry_potter.Wand">
                 <constructor-arg name="spell" value="Avada Kedavra" />
             </bean>
         </constructor-arg>
         <property name="name" value="Voldemort" />
     </bean>
 
-    <bean id="hogwartsBattle" class="ru.bogdaniium.xml_configuration.harry_potter.HogwartsBattle"
+    <bean id="hogwartsBattle" class="ru.bogdanium.xml_configuration.harry_potter.HogwartsBattle"
           init-method="postInit" destroy-method="preDestroy">
         <property name="first" ref="voldemort" />
         <property name="second" ref="harryPotter" />

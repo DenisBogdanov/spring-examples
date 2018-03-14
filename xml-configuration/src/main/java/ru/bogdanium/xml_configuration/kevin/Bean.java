@@ -1,4 +1,4 @@
-package ru.bogdaniium.xml_configuration.kevin;
+package ru.bogdanium.xml_configuration.kevin;
 
 import java.util.List;
 import java.util.Map;

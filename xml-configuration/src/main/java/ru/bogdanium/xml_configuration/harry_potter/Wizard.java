@@ -1,4 +1,4 @@
-package ru.bogdaniium.xml_configuration.harry_potter;
+package ru.bogdanium.xml_configuration.harry_potter;
 
 public class Wizard {
     private String name;

@@ -1,4 +1,4 @@
-package ru.bogdaniium.xml_configuration.kevin;
+package ru.bogdanium.xml_configuration.kevin;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,5 +13,7 @@ public class App {
         System.out.println(bean.getList());
         System.out.println(bean.getSet());
         System.out.println(bean.getMap());
+
+        BeanA beanA = context.getBean("beanA", BeanA.class);
     }
 }

@@ -1,4 +1,4 @@
-package ru.bogdaniium.xml_configuration.udemy;
+package ru.bogdanium.xml_configuration.udemy;
 
 /**
  * Example of setter injection.

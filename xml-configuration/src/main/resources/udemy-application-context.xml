@@ -12,7 +12,7 @@
 
     <!--constructor injection-->
     <bean id="coach"
-          class="ru.bogdaniium.xml_configuration.udemy.TrackCoach"
+          class="ru.bogdanium.xml_configuration.udemy.TrackCoach"
           scope="singleton"
           init-method="postInit"
           destroy-method="preDestroy">
@@ -22,11 +22,11 @@
     </bean>
 
     <!--setter injection-->
-    <bean id="fitnessCoach" class="ru.bogdaniium.xml_configuration.udemy.FitnessCoach" scope="prototype">
+    <bean id="fitnessCoach" class="ru.bogdanium.xml_configuration.udemy.FitnessCoach" scope="prototype">
         <property name="fortuneService" ref="fortuneService"/>
         <property name="team" value="${team.name}"/>
     </bean>
 
-    <bean id="fortuneService" class="ru.bogdaniium.xml_configuration.udemy.HappyFortuneService"/>
+    <bean id="fortuneService" class="ru.bogdanium.xml_configuration.udemy.HappyFortuneService"/>
 
 </beans>
