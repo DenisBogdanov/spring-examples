@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class CoachSpringTest {
 
@@ -27,6 +28,13 @@ public class CoachSpringTest {
     public void coachShouldLoadEmailFromPropertiesFile() {
         coach = context.getBean("fitnessCoach", Coach.class);
         assertEquals("denis@bo.ru", coach.getEmail());
+    }
+
+    @Test
+    public void coachesShouldBeDifferentObjects() {
+        coach = context.getBean("fitnessCoach", Coach.class);
+        Coach coach2 = context.getBean("fitnessCoach", Coach.class);
+        assertNotEquals(coach, coach2);
     }
 
     @After
