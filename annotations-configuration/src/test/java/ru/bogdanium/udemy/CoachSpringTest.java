@@ -17,6 +17,18 @@ public class CoachSpringTest {
         assertEquals("Do fitness things.", coach.getDailyWorkout());
     }
 
+    @Test
+    public void coachShouldReturnDailyFortune() {
+        coach = context.getBean("fitnessCoach", Coach.class);
+        assertEquals("Today is your lucky day.", coach.getDailyFortune());
+    }
+
+    @Test
+    public void coachShouldLoadEmailFromPropertiesFile() {
+        coach = context.getBean("fitnessCoach", Coach.class);
+        assertEquals("denis@bo.ru", coach.getEmail());
+    }
+
     @After
     public void preDestroy() {
         System.out.println("In preDestroy jUnit method");
