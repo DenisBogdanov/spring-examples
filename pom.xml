@@ -12,6 +12,7 @@
         <module>xml-configuration</module>
         <module>annotations-configuration</module>
         <module>java-configuration</module>
+        <module>hitting-database</module>
     </modules>
     <packaging>pom</packaging>
 
