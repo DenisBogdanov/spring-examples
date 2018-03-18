@@ -13,6 +13,7 @@
         <module>annotations-configuration</module>
         <module>java-configuration</module>
         <module>hitting-database</module>
+        <module>spring-jdbc-ride-tracker</module>
     </modules>
     <packaging>pom</packaging>
 
