@@ -14,6 +14,7 @@
         <module>java-configuration</module>
         <module>hitting-database</module>
         <module>spring-jdbc-ride-tracker</module>
+        <module>jpa-hibernate</module>
     </modules>
     <packaging>pom</packaging>
 
