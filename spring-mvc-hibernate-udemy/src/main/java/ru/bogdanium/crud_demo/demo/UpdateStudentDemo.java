@@ -1,11 +1,11 @@
-package ru.bogdanium.demo;
+package ru.bogdanium.crud_demo.demo;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import ru.bogdanium.entity.Student;
+import ru.bogdanium.crud_demo.entity.Student;
 
-public class DeleteStudentDemo {
+public class UpdateStudentDemo {
     public static void main(String[] args) {
 
         // create session factory
@@ -19,17 +19,19 @@ public class DeleteStudentDemo {
 
         try {
 
-//            int studentId = 1;
+            int studentId = 1;
 
             // start a transaction
             session.beginTransaction();
 
-//            Student student = session.get(Student.class, studentId);
+            Student student = session.get(Student.class, studentId);
 
-            // DELETE
-//            session.delete(student);
+            System.out.println("Updating student=" + student);
 
-            session.createQuery("delete from Student where id=2")
+            // UPDATE
+            student.setFirstName("Scooby");
+
+            session.createQuery("update Student set email='foo@gmail.com'")
                     .executeUpdate();
 
             session.getTransaction().commit();

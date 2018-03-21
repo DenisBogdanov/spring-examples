@@ -1,11 +1,13 @@
-package ru.bogdanium.demo;
+package ru.bogdanium.crud_demo.demo;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import ru.bogdanium.entity.Student;
+import ru.bogdanium.crud_demo.entity.Student;
 
-public class UpdateStudentDemo {
+import java.util.List;
+
+public class QueryStudentDemo {
     public static void main(String[] args) {
 
         // create session factory
@@ -19,21 +21,16 @@ public class UpdateStudentDemo {
 
         try {
 
-            int studentId = 1;
-
             // start a transaction
             session.beginTransaction();
 
-            Student student = session.get(Student.class, studentId);
+            List students = session
+                    .createQuery("from Student s where s.lastName='Doe'")
+                    .getResultList();
 
-            System.out.println("Updating student=" + student);
+            students.forEach(System.out::println);
 
-            // UPDATE
-            student.setFirstName("Scooby");
-
-            session.createQuery("update Student set email='foo@gmail.com'")
-                    .executeUpdate();
-
+            // commit transaction
             session.getTransaction().commit();
 
         } finally {
