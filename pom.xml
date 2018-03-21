@@ -15,6 +15,7 @@
         <module>hitting-database</module>
         <module>spring-jdbc-ride-tracker</module>
         <module>jpa-hibernate</module>
+        <module>spring-mvc-hibernate-udemy</module>
     </modules>
     <packaging>pom</packaging>
 
