@@ -1,6 +1,7 @@
 package ru.bogdanium.spring_mvc_demo;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.util.LinkedHashMap;
 
@@ -13,6 +14,10 @@ public class Student {
     private String lastName;
 
     private String country;
+
+    @NotNull(message = "is required")
+    @Pattern(regexp = "^[\\d]{6}", message = "only 6 digits")
+    private String postalCode;
 
     private String favoriteLanguage;
 
@@ -51,6 +56,14 @@ public class Student {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 
     public String getFavoriteLanguage() {

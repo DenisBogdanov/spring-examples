@@ -8,7 +8,7 @@
 
 <h1>Student Confirmation</h1>
 
-<p>Student: ${student.firstName} ${student.lastName} from ${student.country}</p>
+<p>Student: ${student.firstName} ${student.lastName} from ${student.country}, postal code: ${student.postalCode}</p>
 <p>Favorite programming language: ${student.favoriteLanguage}</p>
 <p>
     Operating Systems:

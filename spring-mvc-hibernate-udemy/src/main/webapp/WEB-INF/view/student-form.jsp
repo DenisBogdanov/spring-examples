@@ -36,6 +36,13 @@
     </label>
     <br><br>
 
+    <label>
+        Postal Code (*):
+        <form:input path="postalCode"/>
+    </label>
+    <form:errors path="postalCode" cssClass="error"/>
+    <br><br>
+
     Favorite Programming Language:
     <label>Java <form:radiobutton path="favoriteLanguage" value="Java"/></label>
     <label>Ruby <form:radiobutton path="favoriteLanguage" value="Ruby"/></label>
