@@ -1,8 +1,8 @@
-package ru.bogdanium.hb_eaget_vs_lazy_loading;
+package ru.bogdanium.hb_eager_vs_lazy_loading;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import ru.bogdanium.hb_eaget_vs_lazy_loading.entity.Instructor;
+import ru.bogdanium.hb_eager_vs_lazy_loading.entity.Instructor;
 
 public class AppReadInstructorCourses {
     public static void main(String[] args) {

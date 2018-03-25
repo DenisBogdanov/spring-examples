@@ -1,4 +1,4 @@
-package ru.bogdanium.hb_eaget_vs_lazy_loading.entity;
+package ru.bogdanium.hb_eager_vs_lazy_loading.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
