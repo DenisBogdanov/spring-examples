@@ -3,8 +3,15 @@
 <html>
 <head>
     <title>Form</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
 </head>
 <body>
+
+<p><em>Fill out the form. Asterisk (*) means required.</em></p>
 
 <form:form action="process-form" method="get" modelAttribute="student">
 
@@ -12,34 +19,36 @@
         First name:
         <form:input path="firstName"/>
     </label>
-    <br>
+    <br><br>
+
     <label>
-        Last name:
+        Last name (*):
         <form:input path="lastName"/>
     </label>
-    <br>
+    <form:errors path="lastName" cssClass="error"/>
+    <br><br>
+
     <label>
         Country:
         <form:select path="country">
             <form:options items="${student.countries}"/>
         </form:select>
     </label>
-    <br>
-    <label>
-        Favorite Programming Language:
-        Java <form:radiobutton path="favoriteLanguage" value="Java"/>
-        Ruby <form:radiobutton path="favoriteLanguage" value="Ruby"/>
-        JS <form:radiobutton path="favoriteLanguage" value="JS"/>
-        Python <form:radiobutton path="favoriteLanguage" value="Python"/>
-    </label>
-    <br>
-    <label>
-        Operating Systems:
-        Linux <form:checkbox path="operatingSystems" value="Linux"/>
-        Windows <form:checkbox path="operatingSystems" value="Windows"/>
-        MacOS <form:checkbox path="operatingSystems" value="MacOS"/>
-    </label>
-    <br>
+    <br><br>
+
+    Favorite Programming Language:
+    <label>Java <form:radiobutton path="favoriteLanguage" value="Java"/></label>
+    <label>Ruby <form:radiobutton path="favoriteLanguage" value="Ruby"/></label>
+    <label>JS <form:radiobutton path="favoriteLanguage" value="JS"/></label>
+    <label>Python <form:radiobutton path="favoriteLanguage" value="Python"/></label>
+    <br><br>
+
+    Operating Systems:
+    <label>Linux <form:checkbox path="operatingSystems" value="Linux"/></label>
+    <label>Windows <form:checkbox path="operatingSystems" value="Windows"/></label>
+    <label>MacOS <form:checkbox path="operatingSystems" value="MacOS"/></label>
+    <br><br>
+
     <input type="submit" value="Submit">
 
 </form:form>
