@@ -3,10 +3,11 @@ package ru.bogdanium.mvc.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import ru.bogdanium.mvc.data.entities.Project;
 import ru.bogdanium.mvc.data.services.ProjectService;
 
 import javax.servlet.http.HttpSession;
@@ -40,22 +41,11 @@ public class ProjectController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String saveProject(@RequestParam String name, HttpSession session) {
-        System.out.println(session.getAttribute("token"));
-        System.out.println(name);
+    public String saveProject(@ModelAttribute Project project) {
+
         System.out.println("=====Post request");
+        System.out.println(project);
         return "project_add";
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST, params = {"type=multi"})
-    public String saveMultiYearProject() {
-        System.out.println("=====Post request for MultiYearProject");
-        return "project_add";
-    }
-
-    @RequestMapping(value = "/add", method = RequestMethod.POST, params = {"type=multi", "special"})
-    public String saveSpecialProject() {
-        System.out.println("=====Post request for SpecialProject");
-        return "project_add";
-    }
 }
