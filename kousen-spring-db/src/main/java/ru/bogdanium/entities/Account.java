@@ -1,8 +1,13 @@
 package ru.bogdanium.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
+@Entity
 public class Account {
+
+    @Id
     private Long id;
     private BigDecimal balance;
 
