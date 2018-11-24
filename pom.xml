@@ -3,83 +3,77 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.bogdanium</groupId>
-    <artifactId>spring-examples</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>xml-configuration</module>
-        <module>annotations-configuration</module>
-        <module>java-configuration</module>
-        <module>hitting-database</module>
-        <module>spring-jdbc-ride-tracker</module>
-        <module>jpa-hibernate</module>
-        <module>spring-mvc-hibernate-udemy</module>
-        <module>spring-mvc-oreilly</module>
-    </modules>
-    <packaging>pom</packaging>
+  <groupId>ru.bogdanium</groupId>
+  <artifactId>spring-examples</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>xml-configuration</module>
+    <module>annotations-configuration</module>
+    <module>java-configuration</module>
+    <module>hitting-database</module>
+    <module>spring-jdbc-ride-tracker</module>
+    <module>jpa-hibernate</module>
+    <module>spring-mvc-hibernate-udemy</module>
+    <module>spring-mvc-oreilly</module>
+    <module>vpp-spring</module>
+  </modules>
+  <packaging>pom</packaging>
 
-    <name>spring-examples</name>
-    <url>http://bogdanium.ru</url>
+  <name>spring-examples</name>
+  <url>http://bogdanium.ru</url>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>4.3.14.RELEASE</spring.version>
-    </properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>4.3.14.RELEASE</spring.version>
+  </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
 
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>2.13.0</version>
-            <scope>test</scope>
-        </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>2.13.0</version>
+      <scope>test</scope>
+    </dependency>
 
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.2</version>
-        </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+    </dependency>
 
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-            <type>jar</type>
-        </dependency>
-
-    </dependencies>
+  </dependencies>
 </project>
